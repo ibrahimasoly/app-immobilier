@@ -1,0 +1,141 @@
+@charset "UTF-8";
+*{
+	margin: 0; padding: 0; box-sizing: border-box;
+	text-decoration: none; list-style: none;
+	font-family: 'Poppins', sans-serif;
+}
+:root{
+	--primary-color: #efefef;
+	--bg-color: #2b3a67;
+	--txt-color: #707070;
+}
+
+body{
+	background-color: var(--primary-color);
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	}
+
+/* progress bar */
+
+.progress{
+	width: 400px;
+	margin: 15px auto;
+	padding: 25px 0px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 45px;
+	position: relative;
+}
+
+
+
+/* step */
+.step{
+	width: 50px;
+	height: 50px ;
+	background: #fff;
+	border: 1px solid #ccc;  
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}	
+
+.step p{
+	font-size: 16px;
+	color: var(--txt-color);
+}
+.active {
+	background: #32746d;
+}
+.active p{
+	color: #fff;
+}
+.after{
+	position: relative;
+}
+.after::after{
+	content: " ";
+	position: absolute;
+	top: 50%;
+	width: 300%;
+	height: 5px;
+	left: 100%;
+	z-index: -1;
+	background: #32746d;
+}
+
+/* form */
+form{
+	width: 500px;
+	position: relative;
+	border: 1px solid #ccc;  
+	border-radius: 8px;
+	padding: 1.5rem;
+	background: #fff;
+}
+
+label{
+	display: block;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+input{
+	display: block;
+	width: 100%;
+	padding: 0.55rem;
+	border: 1px solid #ccc;  
+	border-radius: 0.25rem;
+	background: #fff;
+	outline: none;
+}
+.input-group{
+	margin: 1rem 0;
+}
+
+.width-50{
+	width: 50%;
+}
+.ml-auto{
+	margin-left: auto;
+}
+.btn{
+	display: block;
+	padding: 0.75rem;
+	background: var(--bg-color);
+	color: #f3f3f3;
+	cursor: pointer;
+	border-radius: 0.25rem;
+	transition: all 0.1s ease;
+}
+.btn:hover{
+	box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--bg-color);
+}
+
+.file .image{
+	display: none;
+}
+.file label{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0.5rem 0;
+	height: 50px;
+	border: 2px dashed #ddd;
+	cursor: pointer;
+	border-radius: 0.25rem;
+}
+.file label:hover{
+	box-shadow: 0 0 0 2px #fff, 0 0 0 3px #ddd;
+}
+.material-icons{
+	margin-right: 20px;
+}
+
